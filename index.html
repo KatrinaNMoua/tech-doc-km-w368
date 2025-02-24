@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Technical Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>
+      <img id="img_logo" src="https://static.vecteezy.com/system/resources/previews/022/636/384/non_2x/valorant-logo-valorant-icon-transparent-free-png.png" alt="logo">
+      <h1 id="h1_skye">Skye Guide</h1>
+    </header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Abilities">Abilities</a>
+    <a class="nav-link" href="#Best_Maps">Best Maps</a>
+    <a class="nav-link" href="#Flash_Lineups">Flash Lineups</a>
+    <a class="nav-link" href="#Strengths_&_Weaknesses">Strengths & Weaknesses</a>
+    <a class="nav-link" href="#How_to_Counter">How to Counter</a>
+    <a class="nav-link" id="nav-link-agent-pairing" href="#Agent_Pairings">Agent Pairings</a>
+  </nav>
+  <main id="main-doc">
+    <img id="img_skye" src="https://media.assettype.com/afkgaming%2F2022-09%2F2548ac6f-32b7-4b5d-8592-7ac9e347d919%2Fmaxresdefault__2_.jpg?auto=format%2Ccompress&dpr=1.0&format=webp&w=900" alt="skye">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Skye is an Initiator in Valorant, specializing in reconnaissance, team healing, and crowd control. Her abilities allow her to gather intel, disrupt enemy positions, and support teammates through healing and flashes. This documentation provides insights into her abilities, strategies, and optimal usage in gameplay.</p>
+    </section>
+    <section class="main-section" id="Abilities">
+      <header>Abilities</header>
+      <p>Skye's abilities provide a mix of crowd control and healing. Here’s a breakdown of her toolkit:</p>
+      <ul>
+        <li><span class="li_bold">Regrowth (C)</span> – A healing ability that restores HP to teammates within range but does not heal Skye herself.</li>
+        <li><span class="li_bold">Trailblazer (Q)</span> – Deploys a Tasmanian Tiger that can be controlled to scout ahead and concuss enemies.</li>
+        <li><span class="li_bold">Guiding Light (E)</span> – Sends out a controllable hawk that can be detonated to blind enemies.</li>
+        <li><span class="li_bold">Seekers (X)</span> – Releases three seekers that automatically track down enemy locations, blinding them upon impact.</li>
+      </ul>
+      <code>
+        class Regrowth: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, heal_amount, max_range): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.heal_amount = heal_amount <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.max_range = max_range <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;def heal_teammates(self, teammates): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""" Heals teammates within range """ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for teammate in teammates: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if teammate["distance"] <= self.max_range: <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;teammate["hp"] += self.heal_amount <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Healed {teammate['name']} for {self.heal_amount} HP")
+      </code>
+    </section>
+    <section class="main-section" id="Best_Maps">
+      <header>Best Maps</header>
+      <p>Skye performs best on maps where utility, healing, and team coordination are essential. Maps like Bind, Haven, and Lotus provide numerous opportunities for Skye to utilize her flashes and scouting abilities to their full potential. Her ability to heal and support teammates makes her invaluable on maps with long choke points or complex bomb sites where teammates may often take damage.</p>
+      <p>Skye performs well on maps that allow her to utilize her flashes and scouting abilities effectively. The best maps for Skye include:</p>
+      <ul>
+        <li><span class="li_bold">Bind</span> – Teleporters provide great opportunities for surprise flashes.</li>
+        <li><span class="li_bold">Haven</span> – Large sites benefit from her Seekers to track down enemies.</li>
+        <li><span class="li_bold">Fracture</span> – Multiple pathways make her information-gathering abilities invaluable.</li>
+        <li><span class="li_bold">Lotus</span> – The rotating doors allow for creative flash setups.</li>
+      </ul>
+      <code>
+        class Seeker: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, target_list): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.targets = target_list <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;def track_target(self): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""" Moves towards the closest enemy """ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if self.targets: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;closest_target = min(self.targets, key=lambda t: t["distance"]) <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Tracking {closest_target['name']}!")<br>
+      </code>
+    </section>
+    <section class="main-section" id="Flash_Lineups">
+      <header>Flash Lineups</header>
+      <p>Mastering Skye’s Guiding Light ability requires strategic positioning. Here are some recommended flash lineups:</p>
+      <ul>
+        <li><span class="li_bold">Haven</span> - <span class="li_medium">Garage</span> – Curve the flash around the corner to blind enemies peeking from Window.</li>
+        <li><span class="li_bold">Ascent</span> - <span class="li_medium">A Main</span> – Pop the flash above the rooftops to blind defenders inside the site.</li>
+        <li><span class="li_bold">Pearl</span> - <span class="li_medium">B Site</span> – Flash above B Tower to clear defenders before pushing.</li>
+        <li><span class="li_bold">Fracture</span> - <span class="li_medium">A Rope</span> - Use a flash near A Drop to catch rotating enemies off-guard.</li>
+      </ul>
+      <code>
+        class FlashAvoidance: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, agent, has_escape_ability): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.agent = agent self.has_escape_ability = has_escape_ability <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;def dodge_flash(self, reaction_time): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""" Determines if an agent can avoid Skye's flash """ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if self.has_escape_ability and reaction_time < 1.5: <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{self.agent} dodged the flash!") <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else: <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{self.agent} got blinded!")<br>
+      </code>
+    </section>
+    <section class="main-section" id="Strengths_&_Weaknesses">
+      <header>Strengths & Weaknesses</header>
+      <p class="p_strengths_weaknesses">Strengths</p>
+      <ul>
+        <li>Provides both aggressive utility and healing for the team.</li>
+        <li>Excellent for gathering information on enemy positions.</li>
+        <li>Can initiate fights without exposing herself directly.</li>
+        <li>Works well in coordinated team compositions.</li>
+      </ul>
+      <p class="p_strengths_weaknesses">Weaknesses</p>
+      <ul>
+        <li>Requires strong communication to maximize ability effectiveness.</li>
+        <li>Healing is limited to teammates only (self-healing not available).</li>
+        <li>Abilities can be countered by KAY/O’s suppression or fast-moving agents like Jett.</li>
+      </ul>
+      <code>
+        class Trailblazer: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, speed): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.speed = speed self.path = [] <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;def set_path(self, waypoints): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""" Defines movement path for Trailblazer """<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.path = waypoints <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;def detect_enemy(self, enemy_position): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""" Checks if an enemy is within concuss range """ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if enemy_position in self.path: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Enemy concussed!")
+      </code>
+    </section>
+    <section class="main-section" id="How_to_Counter">
+      <header>How to Counter</header>
+      <p>While Skye is a powerful agent, she has specific counters that can limit her effectiveness:</p>
+      <ul>
+        <li><span class="li_bold">Jett’s Dash</span> – Can escape Skye’s flashes before they detonate.</li>
+        <li><span class="li_bold">Chamber’s Teleport</span> – Allows repositioning after being blinded.</li>
+        <li><span class="li_bold">KAY/O’s Suppression</span> – Prevents Skye from using her abilities temporarily.</li>
+        <li><span class="li_bold">Fast Rotations</span> – Avoiding slow plays reduces her healing impact.</li>
+        <li><span class="li_bold">Pre-firing Trailblazer</span> – Destroying the tiger before it reaches you prevents concussions.</li>
+      </ul>
+      <code>
+        class FlashAvoidance: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, agent, has_escape_ability): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.agent = agent self.has_escape_ability = has_escape_ability <br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;def dodge_flash(self, reaction_time): <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""" Determines if an agent can avoid Skye's flash """ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if self.has_escape_ability and reaction_time < 1.5: <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{self.agent} dodged the flash!") <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else: <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{self.agent} got blinded!")<br>
+      </code>
+    </section>
+    <section class="main-section" id="Agent_Pairings">
+      <header>Agent Pairings</header>
+      <p>To maximize Skye’s effectiveness, players should prioritize positioning and communication. Skye excels when placed in key locations that allow her to safely deploy Guiding Light flashes and Seekers. Always be mindful of your team’s health and provide healing when necessary, but don’t forget to use your Trailblazer to scout for enemies. Coordination with your team is critical, as Skye’s abilities are at their best when used in conjunction with other agents’ abilities.</p>
+      <p>Skye works well when paired with agents that enhance her playstyle. Some optimal teammates include:</p>
+      <ul>
+        <li><span class="li_bold">Raze</span> – Uses explosives to capitalize on concussed enemies.</li>
+        <li><span class="li_bold">Omen</span> – Provides smokes for safer flash plays.</li>
+        <li><span class="li_bold">Breach</span> – Combines crowd control abilities for aggressive site takes.</li>
+        <li><span class="li_bold">Killjoy</span> – Defensive synergy for holding sites.</li>
+      </ul>
+    </section>
+  </main>
+</body>
